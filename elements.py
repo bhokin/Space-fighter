@@ -83,9 +83,8 @@ class Ship(Sprite):
         if self.app.bullet_count() >= MAX_NUM_BULLETS:
             return
 
-        dx,dy = direction_to_dxdy(self.direction)
+        dx, dy = direction_to_dxdy(self.direction)
 
         bullet = Bullet(self.app, self.x, self.y, dx * BULLET_BASE_SPEED, dy * BULLET_BASE_SPEED)
 
         self.app.add_bullet(bullet)
-

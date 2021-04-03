@@ -120,7 +120,6 @@ class GameApp(ttk.Frame):
         self.create_canvas()
 
         self.elements = []
-        self.init_game()
 
         self.is_stopped = False
 
