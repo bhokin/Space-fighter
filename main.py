@@ -169,6 +169,8 @@ class SpaceGame(GameApp):
         if self.score_wait >= SCORE_WAIT:
             self.score.value += 1
             self.score_wait = 0
+        if self.score.value == 100 or self.score.value == 200:
+            self.level.value += 1
 
     def update_bomb_power(self):
         self.bomb_wait += 1
@@ -207,6 +209,7 @@ class SpaceGame(GameApp):
         p = random()
 
         for prob, strategy in self.enemy_creation_strategies:
+            prob = prob + (prob * self.level.value / 6)
             if p < prob:
                 enemies = strategy.generate(self, self.ship)
                 break
