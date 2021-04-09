@@ -77,7 +77,7 @@ class Text(GameCanvasElement):
         self.canvas_object_id = self.canvas.create_text(
             self.x, 
             self.y,
-            text=self.text)
+            text=self.text, font="Verdana 10 bold", fill='white')
 
     def set_text(self, text):
         self.text = text
