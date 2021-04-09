@@ -109,6 +109,7 @@ class StatusWithText:
 
 class SpaceGame(GameApp):
     def init_game(self):
+        self.background = Sprite(self, 'images/Space-BG.png', CANVAS_WIDTH // 2, CANVAS_HEIGHT // 2)
         self.ship = Ship(self, CANVAS_WIDTH // 2, CANVAS_HEIGHT // 2)
 
         self.level = StatusWithText(self, 100, 580, 'Level: %d', 0)
